@@ -1,7 +1,6 @@
 #include<iostream>
 #include<string>
 #include<limits>
-
 using namespace std;
 
 class bankAccount {
@@ -138,7 +137,7 @@ public:
             if (!(cin >> option)) {
                 cout << "Invalid input, please enter a valid number. Try again!" << endl;
                 cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');//use of #include<limits> it is ok??
             } else {
                 switch (option) {
                     case 1:
@@ -169,7 +168,7 @@ public:
             if (!(cin >> option)) {
                 cout << "Invalid input, please enter a valid number. Try again!" << endl;
                 cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');// limits
             } else {
                 switch (option) {
                     case 1: {
@@ -190,7 +189,7 @@ public:
                         if (!(cin >> amount)) {
                             cout << "Invalid input, please enter a valid amount. Try again!" << endl;
                             cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');// again limits
                         } else {
                             account->withdraw(amount);
                         }
